@@ -6,7 +6,8 @@ export default function Catalog() {
   const cards = [
     {
       title: "title1",
-      description: "Description 1",
+      description:
+        "AMOBLADO  AMOBLADO y TOTALMENTE EQUIPADO. Ubicado en una de las mejorres zonas de Buenos Aires",
       price: "160.000",
       expenses: "20.000",
       currency: "$",
@@ -85,19 +86,21 @@ export default function Catalog() {
       realEstate: "ARGULES ASOCIADOS",
     },
   ];
+
+  const lorem =
+    "Loremoribus nemo accusamus illum ad totam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel excepturi eligendi repellat voluptatum consequuntur esse minima. Neque, maxime cumque molestias asperiores ullam repellendus, placeat temporibus nemo accusamus illum ad totam.";
   return (
     <MainContainer>
-      <div className="w-full overflow-x-hidden px-60">
-        <div className="p-4 m-6 bg-green-500">filters</div>
+      <div className="w-full justify-center overflow-x-hidden xl:px-60 lg:px-20 md:px-10">
         <CatalogCard
           cards={cards}
           renderItem={(item) => {
             return (
               <div
-                className="shadow-md p-4 m-6 min-w-fit min-h-[300px] rounded flex"
+                className="shadow-lg p-4 lg:m-6 md:min-h-[350px] rounded md:flex"
                 key={item.title}>
-                <div className="w-2/6">Carousel</div>
-                <div>
+                <div className="md:w-[600px] bg-green-500 md:mr-12">Carousel</div>
+                <div className="mt-4 md:w-[1200px]">
                   <div className="flex">
                     <p className="font-extrabold text-2xl">
                       {item.currency}
@@ -111,27 +114,41 @@ export default function Catalog() {
                     <p>{item.address.address}</p>&nbsp; <p>{item.address.addressNumber}</p>
                   </div>
 
-                  <div className="flex">
+                  <div className=" hidden md:flex">
                     Departamento en &nbsp;<p> {item.address.neighborhood}</p>, {item.address.state}
                   </div>
 
-                  <div className="flex mt-8">
-                    <div className="flex">
+                  {/* Mobile version */}
+                  <div className="flex md:hidden">
+                    <p> {item.address.neighborhood}</p>, {item.address.state}
+                  </div>
+
+                  <div className="flex mt-4">
+                    <div className="hidden md:flex">
                       <DoorIcon height="24" className="fill-gray-600" />
                       <p className="mt-0.5">{item.indoorMeters} m² cubie.</p>
                     </div>
 
-                    <div className="flex ml-12">
+                    {/* Mobile version */}
+                    <div className="flex md:hidden">
+                      <DoorIcon height="24" className="fill-gray-600" />
+                      <p className="mt-0.5">{item.indoorMeters} m²</p>
+                    </div>
+
+                    <div className="flex md:ml-12 ml-4">
                       <BedIcon height="24" className="fill-gray-600" />
                       <p className="mt-0.5 ml-1">{item.dorms}</p>
                     </div>
 
-                    <div className="flex ml-12">
+                    <div className="flex md:ml-12 ml-4">
                       <CalendarIcon height="24" className="fill-gray-600" />
-                      <p className="mt-0.5"> &nbsp;{item.years}años</p>
+                      <p className="mt-0.5 ml-1"> &nbsp;{item.years}</p>
+                      <p className="mt-0.5 ml-1">{item.years === "A estrenar" ? null : "años"}</p>
                     </div>
                   </div>
-                  <div>{item.description}</div>
+                  {/* <div className="mt-4">{item.description}</div> */}
+
+                  <div className="mt-4">{lorem}</div>
                 </div>
               </div>
             );
@@ -141,3 +158,5 @@ export default function Catalog() {
     </MainContainer>
   );
 }
+
+// truncate
