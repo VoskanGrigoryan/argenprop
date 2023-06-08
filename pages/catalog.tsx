@@ -97,9 +97,9 @@ export default function Catalog() {
           renderItem={(item) => {
             return (
               <div
-                className="shadow-lg p-4 lg:m-6 md:min-h-[350px] rounded md:flex"
+                className="shadow-lg p-4 lg:m-6 md:min-h-[350px] rounded md:flex bg-gray-200 mb-4"
                 key={item.title}>
-                <div className="md:w-[600px] bg-green-500 md:mr-12">Carousel</div>
+                <div className="h-[300px] md:w-[600px] bg-green-500 md:mr-12">Carousel</div>
                 <div className="mt-4 md:w-[1200px]">
                   <div className="flex">
                     <p className="font-extrabold text-2xl">

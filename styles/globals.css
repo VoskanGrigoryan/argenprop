@@ -4,14 +4,19 @@
 
 .backgroundImageHome {
   /* background-image: url("../public/assets/home-02.jpg"); */
-  background-color: rgba(0, 0, 0, 0.913);
+  background-color: rgba(22, 20, 20, 0.913);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   filter: brightness(100%);
   -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.bgDark {
+  /* background-image: url("../public/assets/home-02.jpg"); */
+  background-color: rgba(22, 20, 20, 0.913);
 }
 
 body {

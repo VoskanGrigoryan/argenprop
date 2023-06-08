@@ -23,8 +23,7 @@ export default function HomeContainer({ children }: any) {
           <WarrantyIcon height={20} className="mt-0.5 ml-1 fill-white" />
         </Button>
         <Button>
-          <p>Acceder</p>{" "}
-          <UserIcon height={20} className="mt-0.5 ml-1 fill-white" />
+          <p>Acceder</p> <UserIcon height={20} className="mt-0.5 ml-1 fill-white" />
         </Button>
       </header>
 
@@ -63,10 +62,11 @@ export default function HomeContainer({ children }: any) {
         )}
       </div>
 
-      <div className="h-[95%] md:h-[92%]  backgroundImageHome justify-center flex items-center">
+      <div className="h-[95%] md:h-[75%]  backgroundImageHome justify-center flex items-center">
         {children}
       </div>
 
+      <div className="h-[0%] md:h-[17%] bgDark"></div>
       {/* Mobile footer */}
       {/* <div className="h-[5%] flex md:hidden lg:hidden justify-center items-center text-sm text-center">
         ¡Encontrá las mejores propiedades en venta y alquiler!
