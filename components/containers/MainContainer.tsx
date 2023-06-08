@@ -38,6 +38,28 @@ export default function MainContainer({ children }: any) {
         />
       </div>
 
+      <div className="flex md:hidden">
+        {isMenuOpen ? (
+          <div className="bg-green-600 absolute block z-50 h-[95%] w-[80%] pt-4 text-white">
+            <ul className="">
+              <li className="border-b mx-4 mb-4">Emprendimientos</li>
+              <li className="border-b mx-4 mb-4">Publicar</li>
+              <li className="border-b mx-4 mb-4">Noticias</li>
+              <li className="border-b mx-4 mb-4  flex justify-between">
+                <p>Cotizá gratis tu garantía </p>
+                <WarrantyIcon height={20} className="fill-white" />
+              </li>
+              <li className="border-b mx-4 mb-4 flex justify-between">
+                <p>Acceder</p>
+                <UserIcon height={20} className="fill-white" />
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <div></div>
+        )}
+      </div>
+
       {/* body tag replaced by div tag because for some reason it creates hidration issue??? */}
       <div className="h-[92%] flex justify-center">{children}</div>
     </main>
